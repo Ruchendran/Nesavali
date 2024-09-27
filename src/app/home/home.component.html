@@ -1,0 +1,244 @@
+<div class="home-container" >
+    <div class="image-container" >
+        <img src={{imageUrl}}  class="home-image" />
+        <div class="screen-container" (mouseenter)="imageHover()" (mouseleave)="imageLeave()" >
+
+        </div>
+        <div class="over-the-screen" #over>
+            <h2 class="top-heading">
+                {{Heading}}
+            </h2>
+            <p class="top-para">
+                {{para}}
+            </p>
+            <button class="products-btn" (click)="goToProducts()">
+                Get The Products
+            </button>
+        </div>
+    </div>
+  
+    <div class="content-container">
+        <div class="d-flex flex-column align-items-center">
+            <h1 class="text-center">
+                Cotton Clothing in Power Looms
+            </h1>
+            <img src="../../assets/underline.webp" style="width: 300px;" />
+        </div>
+       
+        <p>
+            Cotton, a natural fiber, is one of the most widely used materials in textile production. The process of transforming raw cotton into fabric involves a series of mechanical and chemical processes. In modern textile production, power looms play a critical role in weaving cotton into fabric at large scales.
+        </p>
+        <div class="d-flex flex-column align-items-center">
+            <h4>
+                Key Processes in Cotton Clothing Production
+            </h4>
+            <img src="../../assets/underline.webp" style="width: 300px;" />
+        </div>
+      
+        <p>
+            The preparation of cotton clothing in power looms can be divided into several stages, which include:
+        </p>
+        <ul>
+            <li>
+                Harvesting and Ginning
+            </li>
+            <li>
+                Spinning
+            </li>
+            <li>
+                Weaving
+            </li>
+            <li>
+                Dyeing and Finishing
+            </li>
+        </ul>
+        <div class="d-flex flex-column align-items-center">
+            <h4>
+                Harvesting and Ginning
+            </h4>
+            <img src="../../assets/underline.webp" style="width: 300px;" />
+        </div>
+    
+        <div class="patern-image" >
+            <div >
+                <p>
+                    Cotton ginning is the process of separating cotton fibers from the seeds after 
+                    harvesting. This crucial step ensures that the clean, fluffy fibers can be transformed into various  
+                    textiles while removing impurities. Efficient ginning improves fiber quality and prepares 
+                    cotton for further processing in the textile industry.
+                </p>
+            </div>
+            <img src="../../assets/home-images/gining.webp" class="img" />
+        </div>
+        <div class="patern-image" >
+            <img src="../../assets/home-images/harvest.webp" class="img" />
+            <div >
+                <p>
+                    Harvesting cotton involves a carefully timed process to ensure the best quality fibers. 
+                    Cotton plants are usually harvested in the late summer or early fall when the bolls burst 
+                    open, revealing the fluffy white fibers. Farmers typically use mechanical harvesters to 
+                    efficiently gather the cotton, which is then transported for further processing into fabric. 
+                    Proper harvesting techniques are essential to minimize damage and maximize yield, ensuring that 
+                    the cotton remains clean and of high quality for textile production.
+                </p>
+            </div>
+        </div>
+      
+        <p>
+            The process begins with the harvesting of cotton bolls from the cotton plants. After harvesting, the cotton fibers are separated from the seeds in a process known as ginning. The fibers, also called lint, are compressed into bales and transported to the spinning mills.
+        </p>
+        <div class="d-flex flex-column align-items-center">
+            <h4>
+                Spinning
+            </h4>
+            <img src="../../assets/underline.webp" style="width: 300px;" />
+        </div>
+     
+        <p>
+            In the spinning process, raw cotton is cleaned and converted into yarn, which is essential for weaving. This process involves:
+        </p>
+        <ul>
+            <li>
+                <strong>Opening and Cleaning: </strong>
+                The cotton fibers are opened and cleaned to remove impurities.
+            </li>
+            <li>
+                <strong> Carding: </strong>
+                The cleaned fibers are aligned parallel to each other, forming a thin web of fibers.
+            </li>
+            <li>
+                <strong>Drawing and Roving:  </strong>
+                The carded fibers are drawn out to form a thinner strand, and the roving process imparts twist to strengthen the fiber before it’s spun into yarn.
+            </li>
+            <li>
+                <strong> Spinning:</strong>
+                The roving is further twisted into yarn, which is wound onto bobbins
+            </li>
+        </ul>
+        <div class="d-flex flex-column align-items-center">
+            <h4>
+                Weaving on Power Looms
+            </h4>
+            <img src="../../assets/underline.webp" style="width: 300px;" />
+        </div>
+     
+        <p>
+            The yarn produced from the spinning process is sent to the weaving stage. This is where power looms come into play. A power loom is a mechanized loom that significantly increases the speed and efficiency of fabric production. The weaving process on a power loom includes:
+        </p>
+        <ul>
+            <li>
+                <strong>
+                    Warping:
+                </strong>
+                This is the preparation of longitudinal threads (warp) on the loom. The warp threads are wound onto a warp beam and then passed through the loom.
+            </li>
+            <li>
+                <strong>
+                    Weft Insertion:
+                </strong>
+                The weft threads (crosswise threads) are inserted through the warp threads. In power looms, the weft is inserted using shuttles, air jets, or water jets depending on the type of loom.
+            </li>
+            <li>
+                <strong>
+                    Shedding, Picking, and Beating:
+                </strong>
+                These are the primary actions of weaving. The warp threads are raised and lowered to create an opening for the weft (shedding), the shuttle or jet inserts the weft (picking), 
+                and the reed pushes the weft into place to form the fabric (beating).
+            </li>
+            <li>
+                <strong>
+                    Warping:
+                </strong>
+            </li>
+        </ul>
+
+        <div class="d-flex flex-column align-items-center">
+            <h4>
+                Finishing and Dyeing
+            </h4>
+            <img src="../../assets/underline.webp" style="width: 300px;" />
+        </div>
+     
+        <p>
+            Once the fabric is woven, it undergoes several finishing processes to enhance its appearance, feel, and performance
+        </p>
+        <p>
+            Dyeing is the process of imparting color to textiles by immersing them in dye solutions, where the fibers absorb the colorant. 
+            There are various dyeing techniques, such as piece dyeing, where the fabric is dyed after being woven, and yarn dyeing, where the yarn itself 
+            is dyed before weaving or knitting. Modern dyeing methods often use eco-friendly dyes and processes to minimize environmental impact.
+        </p>
+        <p>
+            Finishing is the final step in textile production, where the cloth undergoes treatments to enhance its appearance, 
+            durability, and functionality. Common finishes include softening, water-repellent coatings, and wrinkle resistance. 
+            Some textiles may also be bleached or printed to achieve specific patterns and colors.
+        </p>
+        <p>
+            Together, dyeing and finishing transform raw textiles into polished, usable fabrics. They play a crucial role in determining the aesthetic and functional characteristics of the finished product, making the cloth ready for use in fashion, upholstery, and various other industries.
+        </p>
+        <div class="d-flex flex-column align-items-center">
+            <h4>
+                Automation in Power Looms
+            </h4>
+            <img src="../../assets/underline.webp" style="width: 300px;" />
+        </div>
+
+        <p>
+            Automation in power looms has revolutionized the textile industry by enhancing the efficiency and precision of fabric production. Traditionally, power looms required significant manual intervention for 
+            operations like warp management, thread tensioning, and defect detection. With automation, these tasks are now controlled by advanced sensors, computerized systems, and robotics, minimizing human error and increasing production speed
+        </p>
+        <p>
+            Automated looms can monitor fabric quality in real-time, adjust for irregularities, and 
+            even perform maintenance functions like changing bobbins without manual input. This leads 
+            to higher productivity, reduced downtime, and improved fabric consistency. Moreover, automation
+             helps in energy conservation and reduces the labor cost associated with operating power looms.
+        </p>
+        <p>
+            As technology continues to evolve, automated power looms are incorporating smart systems 
+            like IoT integration, allowing remote monitoring and control. This leap in automation has not 
+            only boosted output but also made the textile manufacturing process more sustainable and efficient, 
+            ensuring quicker turnaround times and better product quality.
+        </p>
+        <div class="d-flex flex-column align-items-center">
+            <h4>
+                Quality Control in Cotton Fabric Production
+            </h4>
+            <img src="../../assets/underline.webp" style="width: 300px;" />
+        </div>
+     
+        <p>
+            Quality control in cotton fabric production is essential to ensure the final product meets industry standards 
+            and customer expectations. The process begins with the selection of raw cotton, where factors like fiber length,
+            strength, and cleanliness are examined. During spinning, weaving, and dyeing, quality checks are conducted at various stages to identify defects such as uneven yarn, knots, or color inconsistencies.
+        </p>
+        <p>
+            Advanced testing methods, such as tensile strength tests, air permeability, and 
+            shrinkage assessments, are used to measure the fabric's durability, breathability, 
+            and resistance to wear and tear. Regular inspections help identify any issues early 
+            in the production process, preventing costly waste and reworks
+        </p>
+        <p>
+            Quality control also involves maintaining consistent production environments, 
+            where humidity, temperature, and machine settings are carefully regulated to avoid 
+            variations in fabric quality. By implementing strict quality measures, cotton fabric 
+            producers can ensure high standards of softness, strength, and visual appeal, making 
+            the fabric suitable for various applications in apparel, home textiles, and industrial 
+            use.
+        </p>
+        <div class="d-flex flex-column align-items-center">
+            <h4>
+                Conclusion
+            </h4>
+            <img src="../../assets/underline.webp" style="width: 300px;" />
+        </div>
+     
+        <p>
+            The preparation of cotton clothing in power looms is a sophisticated
+             process that has evolved significantly with the advent of modern technology. 
+             From spinning yarn to weaving fabric and finishing, each step is crucial in ensuring 
+             the production of high-quality cotton textiles. Power looms, in particular, have revolutionized
+              the industry by increasing production efficiency while maintaining consistent fabric quality. 
+              Through continued innovation and attention to sustainability, the cotton textile industry 
+              continues to meet global demand while minimizing its environmental impact
+        </p>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<app-header *ngIf="path!=='/404'">
+  
+</app-header>
+<router-outlet>
+
+</router-outlet>
+
+<div class="whatsapp-container">
+    <div class="join-container" [ngClass]="openWhatsapp?'whats-animation-open':(whatsCount===1?'whats-animation-close':'')" >
+        <strong class="whats-text" [ngClass]="openWhatsapp?'show-text':''" (click)="MsgThroughWts()">
+            Chat With Whatsapp
+        </strong>
+    </div>
+    <img src="../assets/whatsap.webp" class="wts-img" (click)="whatsAppClick()"  />
+ 
+</div>
+
+<app-footer *ngIf="path!=='/404'">
+
+</app-footer>
