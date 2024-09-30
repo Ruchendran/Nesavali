@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router,NavigationEnd } from '@angular/router';
+import { ShareService } from './share.service';
 
 @Component({
   selector: 'app-root',
@@ -13,11 +14,11 @@ export class AppComponent {
   whatsCount:any=0;
   path:any=''
   
-  constructor(private route:Router){
+  constructor(private route:Router,public share:ShareService){
     this.route.events.subscribe((event)=>{
       if (event instanceof NavigationEnd) {
         this.path=event.urlAfterRedirects;
-        console.log(this.path)
+        this.share.mobileSlideAnimation=false;
       }
     })
   }
@@ -30,7 +31,7 @@ export class AppComponent {
 
   MsgThroughWts=()=>{
     console.log("hit")
-    window.open("https://wa.me/8074178839",'_blank');
+    window.open("https://wa.me/+918074178839",'_blank');
   }
 
 }

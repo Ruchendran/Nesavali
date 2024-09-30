@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ShareService } from '../share.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
- mobileSlideAnimation:any=false;
-
- constructor(private route:Router){
+ constructor(private route:Router,public share:ShareService){
 
  }
 
@@ -18,13 +17,13 @@ export class HeaderComponent {
  }
 
  menuClick=()=>{
-  this.mobileSlideAnimation=true;
+  this.share.mobileSlideAnimation=true;
  }
 
  closeClick=()=>{
   setTimeout(()=>{
-    this.mobileSlideAnimation=false;
-  },400)
+    this.share.mobileSlideAnimation=false;
+  },0)
  
  }
 

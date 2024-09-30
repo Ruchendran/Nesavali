@@ -106,14 +106,17 @@
 
 .sliding-mobile-container{
     position: absolute;
-    display: block;
+    display: none;
     width: 50vw;
     background-color:$bg-color;
     height: 100vh;
     top: 0px;
-    right: -50vw;
+    left: 100vw;
+    // z-index: 20;
 }
 .sliding-container-open{
+    // z-index: 20;
+    display: block;
     animation: sliding-open 1s 1 linear forwards;
 }
 @keyframes sliding-open {
@@ -121,7 +124,9 @@
         transform: translate(0px);
     }
     100%{
-        transform: translate(-50vw);
+        // z-index: 25;
+        left: 50vw;
+        // transform: translate(-50vw);
     }
 }
 .sliding-container-close{

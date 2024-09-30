@@ -15,7 +15,7 @@ const routes: Routes = [
         title:"Cotton Clothing in Power Looms",
         metaTags:[
           {name:"description",content:"Experience the softness and durability of our premium cotton cloth, designed for everyday comfort. Made from 100% natural fibers, it’s perfect for all your fabric needs."},
-          {property:"og-image",content:""},
+          {property:"og-image",content:"https://chathruknasathvathu.netlify.app/assets/logo.png"},
           {property:"og-description",content:"Experience the softness and durability of our premium cotton cloth, designed for everyday comfort. Made from 100% natural fibers, it’s perfect for all your fabric needs."},
           {property:"og-title",content:"Cotton Clothing in Power Looms"}
         ]
@@ -30,7 +30,7 @@ const routes: Routes = [
         title:"About us",
         metaTags:[
           {name:"description",content:"With a legacy of craftsmanship and innovation, our mission is to deliver durable, soft, and eco-friendly cotton fabrics to meet the ever-growing demands of the textile industry"},
-          {property:"og-image",content:""},
+          {property:"og-image",content:"https://chathruknasathvathu.netlify.app/assets/diomond.webp"},
           {property:"og-description",content:"With a legacy of craftsmanship and innovation, our mission is to deliver durable, soft, and eco-friendly cotton fabrics to meet the ever-growing demands of the textile industry"},
           {property:"og-title",content:"About us"}
         ]
@@ -45,7 +45,7 @@ const routes: Routes = [
         title:"Contact us",
         metaTags:[
           {name:"description",content:"We would love to hear from you! Whether you have questions about our cotton fabrics, need assistance with an order, or want to learn more about our production process, feel free to get in touch."},
-          {property:"og-image",content:""},
+          {property:"og-image",content:"https://chathruknasathvathu.netlify.app/assets/whatsapp.webp"},
           {property:"og-description",content:"We would love to hear from you! Whether you have questions about our cotton fabrics, need assistance with an order, or want to learn more about our production process, feel free to get in touch."},
           {property:"og-title",content:"Contact us"}
         ]
@@ -60,7 +60,7 @@ const routes: Routes = [
         title:"Our Products with reliable sources",
         metaTags:[
           {name:"description",content:"Crafted with care, our cotton fabrics offer durability and a natural touch for all your garment needs."},
-          {property:"og-image",content:""},
+          {property:"og-image",content:"https://chathruknasathvathu.netlify.app/assets/products-images/shirt1.webp"},
           {property:"og-description",content:"Crafted with care, our cotton fabrics offer durability and a natural touch for all your garment needs."},
           {property:"og-title",content:"Our Products with reliable sources"}
         ]
@@ -75,7 +75,7 @@ const routes: Routes = [
         title:"Our sucesss in a businesss",
         metaTags:[
           {name:"description",content:"From humble beginnings, we’ve grown into a trusted name in the textile industry, delivering high-quality cotton fabrics to customers worldwide."},
-          {property:"og-image",content:""},
+          {property:"og-image",content:"https://chathruknasathvathu.netlify.app/assets/home-images/lend1.png"},
           {property:"og-description",content:"From humble beginnings, we’ve grown into a trusted name in the textile industry, delivering high-quality cotton fabrics to customers worldwide."},
           {property:"og-title",content:"Our sucesss in a businesss"}
         ]

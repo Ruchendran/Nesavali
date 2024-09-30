@@ -6,6 +6,8 @@
     height: 300px;
     background-size: cover;
     position: relative;
+    overflow-x: hidden;
+    z-index: -10;
 }
 .screen{
     width: 100vw;

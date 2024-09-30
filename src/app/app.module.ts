@@ -12,6 +12,7 @@ import { ProductsComponent } from './products/products.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { ShareService } from './share.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
     AppRoutingModule,
     RouterModule
   ],
-  providers: [],
+  providers: [ShareService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
