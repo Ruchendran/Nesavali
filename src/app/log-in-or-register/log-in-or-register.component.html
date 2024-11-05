@@ -1,0 +1,56 @@
+<!-- <div class="container-fluid"> -->
+    <div class="main-container" >
+        <div class="side-menu " >
+            <button class="btn m-top" (click)="this.share.onLogin()">
+                Login
+            </button>
+            <button class="btn m-top" (click)="this.share.onRegister()">
+                Register
+            </button>
+            <button class="btn m-top">
+                Logout
+            </button>
+        </div>
+        <div class="auth-container">
+            <div class="login-container"  *ngIf="this.share.loginForm" >
+                <h1>
+                    Login Form
+                </h1>
+               
+                <input placeholder="Enter the Username" type="text" />
+                <input  placeholder="Enter the User Mail" type="text"/>
+                <input placeholder="Enter the Password" [type]="this.share.openicon?'text':'password'"  />
+                <div class="icon-container">
+                    <i class="bi bi-eye-slash-fill icon-eye" (click)="this.share.iconClose()"   *ngIf="this.share.closeicon"></i>
+                    <i class="bi bi-eye-fill icon-eye" (click)="this.share.iconOpen()" *ngIf="this.share.openicon"></i>
+                </div>
+             
+             
+              
+             
+               
+                <div>
+                    <button class="btn " style="width: 250px;">
+                        Submit
+                    </button>
+                </div>
+            </div>
+            <div class="login-container " style="height: 300px;" *ngIf="this.share.registerForm">
+                <h1>
+                    Register Form
+                </h1>
+                <input  placeholder="Enter the User Mail"/>
+                <input placeholder="Enter the Password" />
+                <div class="icon-container">
+                    <i class="bi bi-eye-slash-fill icon-eye" (click)="this.share.iconClose()"   *ngIf="this.share.closeicon"></i>
+                    <i class="bi bi-eye-fill icon-eye" (click)="this.share.iconOpen" *ngIf="this.share.openicon"></i>
+                </div>
+                <div>
+                    <button class="btn" style="width: 250px;">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->

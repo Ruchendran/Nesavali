@@ -18,7 +18,17 @@
         <a  routerLink="/success" routerLinkActive="highlight">
             Success
         </a>
+      
     </div>
+    <!--person icon contaner-->
+    <div  class="person-icon-container">
+        <a routerLink="/auth">
+            <i class="bi bi-person-fill icon-person"></i>
+        </a>
+    </div>
+
+
+
     <i class="bi bi-card-list icon-mobile-menu" (click)="menuClick()" ></i>
     <div class="sliding-mobile-container" [ngClass]="this.share.mobileSlideAnimation ?'sliding-container-open':''" >
        <div class="header-slide">
@@ -50,6 +60,14 @@
                 Success
             </a>
             <hr class="line" />
+            <div class="btn-container">
+                <button class="btn" (click)="this.share.onLogin()">
+                    Login
+                </button>
+                <button class="btn" (click)="this.share.onRegister()">
+                    Register
+                </button>
+            </div>
         </div>
         
     </div>

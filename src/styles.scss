@@ -15,6 +15,9 @@ $font-group:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ox
     background: $orange; 
     border-radius: 10px;
   }
+  .m-top{
+    margin-top: 40px;
+  }
 body{
     color:#000000;
     overflow-x: hidden !important;
@@ -36,4 +39,58 @@ h1{
 }
 strong{
   color:$orange;
+}
+
+.icon-person{
+  cursor: pointer;
+  color:$orange;
+  font-size: 30px;
+}
+
+
+.btn{
+  width: 100px;
+  height: 40px;
+  background-color:$bg-color;
+  color:$orange;
+  border-radius: 10px;
+  border-color:$orange;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.btn:hover{
+  color:$bg-color;
+  background-color:$orange;
+  // border-color:$bg-color;
+  font-weight: bold;
+}
+.btn::before{
+  content: "";
+  width: 100%;
+  position: absolute;
+  background-color:$orange;
+  height:40px;
+  top: -25px;
+  left:-50px;
+  z-index: -10;
+  rotate:160deg;
+}
+
+.btn:hover::before{
+  background-color:$bg-color;
+}
+.btn::after{
+  content: "";
+  position: absolute;
+  background-color:$orange;
+  width: 100%;
+  height: 40px;
+  right: -50px;
+  bottom: -25px;
+  rotate: 160deg;
+}
+.btn:hover::after{
+  background-color:$bg-color;
 }

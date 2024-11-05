@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ShareService } from './share.service';
+import { LogInOrRegisterComponent } from './log-in-or-register/log-in-or-register.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ShareService } from './share.service';
     SuccessComponent,
     ProductsComponent,
     FooterComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    LogInOrRegisterComponent
   ],
   imports: [
     BrowserModule,

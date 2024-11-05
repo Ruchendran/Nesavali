@@ -13,7 +13,7 @@
     z-index: 10;
 }
 .sub-container{
-    width: 80vw;
+    width: 75vw;
     height: fit-content;
     display: flex;
     justify-content: space-around;
@@ -56,10 +56,15 @@
 }
 
 .logo-container{
-    width: 20vw;
+    width: 15vw;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.person-icon-container{
+    width: 10vw;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -85,9 +90,21 @@
 
 
 @media (max-width:576px) {
+    .btn-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .person-icon-container{
+        width:0px;
+    }
 
     .sub-container>a{
        display: none;
+    }
+    .icon-person{
+        display: none;
     }
     
 .logo-container{

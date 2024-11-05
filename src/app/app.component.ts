@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   openWhatsapp:any=false;
   whatsCount:any=0;
   path:any=''
+  foter=true;
   
   constructor(private route:Router,public share:ShareService, private activatedRoute: ActivatedRoute,
     private seoService: SeoService){
@@ -41,6 +42,17 @@ export class AppComponent implements OnInit {
         // console.log(data,this.activatedRoute.snapshot)
         this.seoService.updateMetaData(data);
       });
+
+    this.route.events.subscribe((data)=>{
+      if(data instanceof NavigationEnd){
+        if(data.url==='/auth'){
+          this.foter=false
+        }
+        else{
+          this.foter=true
+        }
+      }
+    })
   }
 
   whatsAppClick=()=>{
