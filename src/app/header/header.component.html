@@ -61,11 +61,20 @@
             </a>
             <hr class="line" />
             <div class="btn-container">
-                <button class="btn" (click)="this.share.onLogin()">
+                <button class="btn" (click)="this.share.onLogin()" style="width: 150px;">
                     Login
                 </button>
-                <button class="btn" (click)="this.share.onRegister()">
+                <br/>
+                <button class="btn" (click)="this.share.onRegister()"  style="width: 150px;">
                     Register
+                </button>
+                <br/>
+                <button class="btn"  style="width: 150px;" >
+                    Logout
+                </button>
+                <br/>
+                <button class="btn"  style="width: 150px;" (click)="this.share.navToAdmin()" >
+                    Admin
                 </button>
             </div>
         </div>

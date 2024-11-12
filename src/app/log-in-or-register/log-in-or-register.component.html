@@ -10,16 +10,19 @@
             <button class="btn m-top">
                 Logout
             </button>
+            <button class="btn m-top" (click)="this.share.navToAdmin()">
+                Admin
+            </button>
         </div>
         <div class="auth-container">
-            <div class="login-container"  *ngIf="this.share.loginForm" >
+            <form class="login-container"   *ngIf="this.share.registerForm"   [formGroup]="registerForm" (ngSubmit)="onRegister()" >
                 <h1>
-                    Login Form
+                    RegisterForm
                 </h1>
                
-                <input placeholder="Enter the Username" type="text" />
-                <input  placeholder="Enter the User Mail" type="text"/>
-                <input placeholder="Enter the Password" [type]="this.share.openicon?'text':'password'"  />
+                <input placeholder="Enter the Username" type="text" formControlName="name" />
+                <input  placeholder="Enter the User Mail" type="text" formControlName="mail"/>
+                <input placeholder="Enter the Password" [type]="this.share.openicon?'text':'password'" formControlName="password"  />
                 <div class="icon-container">
                     <i class="bi bi-eye-slash-fill icon-eye" (click)="this.share.iconClose()"   *ngIf="this.share.closeicon"></i>
                     <i class="bi bi-eye-fill icon-eye" (click)="this.share.iconOpen()" *ngIf="this.share.openicon"></i>
@@ -28,29 +31,39 @@
              
               
              
-               
+               <p *ngIf="!this.registerForm.valid && this.registerForm.touched" style="color:#ffffff;" >
+                Please fill the details properly
+               </p>
+               <p *ngIf="this.existedUser"  style="color:#ffffff;" >
+                    User Already exist
+                </p>
                 <div>
-                    <button class="btn " style="width: 250px;">
+                    <button class="btn " style="width: 250px;" type="submit">
                         Submit
                     </button>
                 </div>
-            </div>
-            <div class="login-container " style="height: 300px;" *ngIf="this.share.registerForm">
+             
+            </form>
+            <form class="login-container " style="height: 300px;" *ngIf="this.share.loginForm" [formGroup]="loginForm" (ngSubmit)="onLogin()">
                 <h1>
-                    Register Form
+                 Login Form
                 </h1>
-                <input  placeholder="Enter the User Mail"/>
-                <input placeholder="Enter the Password" />
+                <input  placeholder="Enter the User Mail" formControlName="mail" />
+                <input placeholder="Enter the Password" formControlName="password" [type]="this.share.openicon?'text':'password'" />
                 <div class="icon-container">
                     <i class="bi bi-eye-slash-fill icon-eye" (click)="this.share.iconClose()"   *ngIf="this.share.closeicon"></i>
-                    <i class="bi bi-eye-fill icon-eye" (click)="this.share.iconOpen" *ngIf="this.share.openicon"></i>
+                    <i class="bi bi-eye-fill icon-eye" (click)="this.share.iconOpen()" *ngIf="this.share.openicon"></i>
                 </div>
+                <p *ngIf="!this.loginForm.valid && this.loginForm.touched" style="color:#ffffff;" >
+                    Please fill the details properly
+                </p>
+             
                 <div>
-                    <button class="btn" style="width: 250px;">
+                    <button class="btn" style="width: 250px;" type="submit">
                         Submit
                     </button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 <!-- </div> -->

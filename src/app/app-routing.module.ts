@@ -7,6 +7,7 @@ import { ProductsComponent } from './products/products.component';
 import { SuccessComponent } from './success/success.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { LogInOrRegisterComponent } from './log-in-or-register/log-in-or-register.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   {
@@ -102,7 +103,9 @@ const routes: Routes = [
   {
     path:"auth",component:LogInOrRegisterComponent
   },
-
+  {
+    path:"admin",component:AdminComponent
+  },
   {
     path:"**",redirectTo:"/404",
   }

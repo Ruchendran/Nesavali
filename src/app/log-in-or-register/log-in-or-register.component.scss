@@ -62,8 +62,13 @@ h1{
     .side-menu{
         display: none;
     }
+    .main-container{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
     .auth-container{
-        width: 100vw;
+        width: 90vw;
     }
 }
 

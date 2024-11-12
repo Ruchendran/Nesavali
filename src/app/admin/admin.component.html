@@ -1,0 +1,28 @@
+
+<div  class="admin-container"> 
+    <table class="table m-top m"  >
+        <tr>
+            <th>
+                Index
+            </th>
+            <th>
+                Name
+            </th>
+            <th >
+                Mail
+            </th>
+        </tr>
+        <tr *ngFor="let data of tableData;let i=index;" >
+            <td>
+             {{i+1}}
+            </td>
+            <td>
+                {{data.name}}
+            </td>
+            <td>
+                {{data.mail}}
+            </td>
+        </tr>
+
+    </table>
+</div>

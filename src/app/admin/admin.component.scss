@@ -1,0 +1,29 @@
+@import "../../styles.scss";
+.admin-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // overflow-x: scroll;
+}
+
+th{
+    width: 300px;
+    color:$text-color;
+    border: solid 2px $orange;
+    background-color:$bg-color;
+    text-align: center;
+
+}
+td{
+    width: 300px;
+    color:$bg-color;
+    border: solid 2px $orange;
+    // background-color:$bg-color;
+    text-align: center;
+}
+tr{
+    height: 40px;
+}
+.table{
+   width: 90%;
+}

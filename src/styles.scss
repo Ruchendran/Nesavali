@@ -18,6 +18,9 @@ $font-group:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ox
   .m-top{
     margin-top: 40px;
   }
+.m{
+  margin-top: 40px;
+}
 body{
     color:#000000;
     overflow-x: hidden !important;
@@ -93,4 +96,10 @@ strong{
 }
 .btn:hover::after{
   background-color:$bg-color;
+}
+
+
+
+@media (max-width:572px) {
+
 }
