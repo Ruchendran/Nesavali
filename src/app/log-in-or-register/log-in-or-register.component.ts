@@ -3,6 +3,7 @@ import { ShareService } from '../share.service';
 import  {ApiService} from "../../app/services/api.service";
 import { FormGroup,FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-log-in-or-register',
@@ -11,13 +12,15 @@ import { Router } from '@angular/router';
 })
 export class LogInOrRegisterComponent implements OnInit {
 
-  constructor(public share:ShareService,private api:ApiService,private route:Router){
+  constructor(public share:ShareService,private api:ApiService,private route:Router,private cookie:CookieService){
 
   }
 
   loginForm!:FormGroup;
   registerForm!:FormGroup;
   existedUser=false;
+  passwordCorect=true;
+  userValid=true;
 
   ngOnInit(): void {
    this.registerForm=new FormGroup({
@@ -37,8 +40,24 @@ export class LogInOrRegisterComponent implements OnInit {
   onLogin=()=>{
    console.log(this.loginForm)
    this.api.login(this.loginForm.value).subscribe((response)=>{
-    console.log(response);
     let result=JSON.parse(JSON.stringify(response));
+    console.log(result)
+    if(result.userStatus){
+      this.userValid=true;
+      if(result.passwordStatus){
+        this.passwordCorect=true;
+        this.cookie.set('user-auth',JSON.stringify(result.userDet),1);
+        this.route.navigate([''])
+      }else{
+        // console.log('hit')
+        this.passwordCorect=false;
+        
+      }
+    }
+    else{
+      this.passwordCorect=false;
+     this.userValid=false;
+    }
 
    })
   }
@@ -48,7 +67,8 @@ export class LogInOrRegisterComponent implements OnInit {
        let result=JSON.parse(JSON.stringify(response));
         if(result.statusCode===200){
           this.existedUser=false;
-          this.route.navigate([''])
+          this.route.navigate(['']);
+          this.cookie.set('user-auth',JSON.stringify(this.registerForm.value),1);
         }
         else{
           console.log("hit")

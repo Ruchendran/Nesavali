@@ -8,10 +8,12 @@ import { SuccessComponent } from './success/success.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { LogInOrRegisterComponent } from './log-in-or-register/log-in-or-register.component';
 import { AdminComponent } from './admin/admin.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
     path:"",component:HomeComponent,pathMatch:"full",
+    canActivate:[AuthGuard],
     data:{
       seo:{
         title:"Cotton Clothing in Power Looms",
@@ -27,6 +29,7 @@ const routes: Routes = [
   },
   {
     path:"about",component:AboutComponent,pathMatch:"full",
+    canActivate:[AuthGuard],
     data:{
       seo:{
         title:"About us",
@@ -42,6 +45,7 @@ const routes: Routes = [
   },
   {
     path:"contact",component:ContactComponent,pathMatch:"full",
+    canActivate:[AuthGuard],
     data:{
       seo:{
         title:"Contact us",
@@ -57,6 +61,7 @@ const routes: Routes = [
   },
   {
     path:"products",component:ProductsComponent,pathMatch:"full",
+    canActivate:[AuthGuard],
     data:{
       seo:{
         title:"Our Products with reliable sources",
@@ -72,6 +77,7 @@ const routes: Routes = [
   },
   {
     path:"success",component:SuccessComponent,pathMatch:"full",
+    canActivate:[AuthGuard],
     data:{
       seo:{
         title:"Our sucesss in a businesss",
@@ -112,7 +118,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{useHash:true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

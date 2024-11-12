@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShareService {
   mobileSlideAnimation:any=false;
-  constructor(private route:Router) { }
+  constructor(private route:Router,private cookie:CookieService) { }
 
   loginForm=true;
   registerForm=false;
@@ -43,4 +44,9 @@ export class ShareService {
     this.registerForm=true;
     this.route.navigate(['auth']);
   }
+
+  onLogout=()=>{
+    this.cookie.delete('user-auth');
+  }
+
 }

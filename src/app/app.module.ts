@@ -18,6 +18,7 @@ import { LogInOrRegisterComponent } from './log-in-or-register/log-in-or-registe
 import { ApiService } from './services/api.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { AdminComponent } from './admin/admin.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [ShareService,ApiService],
+  providers: [ShareService,ApiService,CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

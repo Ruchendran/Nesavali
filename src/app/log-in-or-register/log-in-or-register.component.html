@@ -7,7 +7,7 @@
             <button class="btn m-top" (click)="this.share.onRegister()">
                 Register
             </button>
-            <button class="btn m-top">
+            <button class="btn m-top" (click)="this.share.onLogout()">
                 Logout
             </button>
             <button class="btn m-top" (click)="this.share.navToAdmin()">
@@ -44,7 +44,7 @@
                 </div>
              
             </form>
-            <form class="login-container " style="height: 300px;" *ngIf="this.share.loginForm" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <form class="login-container"  *ngIf="this.share.loginForm" [formGroup]="loginForm" (ngSubmit)="onLogin()">
                 <h1>
                  Login Form
                 </h1>
@@ -54,10 +54,10 @@
                     <i class="bi bi-eye-slash-fill icon-eye" (click)="this.share.iconClose()"   *ngIf="this.share.closeicon"></i>
                     <i class="bi bi-eye-fill icon-eye" (click)="this.share.iconOpen()" *ngIf="this.share.openicon"></i>
                 </div>
-                <p *ngIf="!this.loginForm.valid && this.loginForm.touched" style="color:#ffffff;" >
-                    Please fill the details properly
+                <p style="color:#ffffff;"  >
+                   {{!this.loginForm.valid && this.loginForm.touched?'Please fill the Input proper':userValid?passwordCorect?'':'password is not valid':'user no valid'}}
                 </p>
-             
+            
                 <div>
                     <button class="btn" style="width: 250px;" type="submit">
                         Submit
